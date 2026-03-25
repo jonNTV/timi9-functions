@@ -3,18 +3,12 @@
 //    console.log(i);
 //}
 
-let i = 0;
-
-while(i < 5){
-    console.log(i);
-    i++;
-}
 
 let win = false;
 
 while( win === false){
     console.log("keyrir tölvuleikinn");
-
+    var i = 0;
     win = true;
     console.log("JIBBI ÞU VANNST")
 }
@@ -66,5 +60,4 @@ decrement(5, 10)
 multiply(10,10);
 
 console.log(isEven(123471274892373488))
-
 

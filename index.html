@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="is">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>DOM dæmi</title>
 </head>
 <body>
-    
+  <input type="text" id="taskInput" placeholder="Skrifaðu verkefni" />
+  <button id="addBtn">Bæta við</button>
 
-    <script src="app.js"></script>
+  <ul id="taskList"></ul>
+
+  <script>
+    const input = document.getElementById("taskInput");
+    const button = document.getElementById("addBtn");
+    const list = document.getElementById("taskList");
+
+    button.addEventListener("click", function () {
+      const taskText = input.value;
+
+      if (taskText.trim() === "") {
+        alert("Skrifaðu eitthvað fyrst");
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = taskText;
+
+      list.appendChild(li);
+      input.value = "";
+    });
+  </script>
+  <script src=""></script>
 </body>
 </html>
